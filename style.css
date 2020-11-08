@@ -1,0 +1,87 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;/* Barra de rolamento escondida*/
+    position: relative; /* A posição tem que ser relative para o banner ser absolute*/
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    animation: zoom 25s; /* função para criar o efeito de zoom. a Primeira expressão e o nome 
+    e a segunda é o tempo*/
+
+}
+
+@keyframes zoom{ /*Criação de frames chaves entre as imagens*/
+    0%{ /*No momento 0 a escala será de 1.3*/
+        transform: scale(1.3);
+    }
+    100%{ /*No momento 0 a escala será de 1*/
+        transform: scale(1);
+    }
+}
+.banner{
+    position: absolute;
+    top: 45%;
+    left: 25%;
+
+}
+
+.banner h1{
+    color: white;
+    font-size: 3.5em;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: .3rem .4rem 2px black;
+    margin-bottom: 1rem;
+    animation: bannerMove 1s forwards;
+    opacity: 0;
+}
+
+.banner p{
+    color: white;
+    font-size: 2rem;
+    text-shadow: .3rem .4rem 2px black;
+    margin-bottom: 2rem;
+    animation: bannerMove 1s forwards;
+    opacity: 0;
+}
+
+.banner button{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    background: #334366; 
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  /*Ao passar por cima do item, o mouse mudará de estado*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    animation: bannerMove 1s forwards;
+}
+
+@keyframes bannerMove{
+    0%{
+        transform: translateY(10rem);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
