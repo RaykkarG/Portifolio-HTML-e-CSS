@@ -55,7 +55,7 @@ header{
     font-size: 2rem;
     text-shadow: .3rem .4rem 2px black;
     margin-bottom: 2rem;
-    animation: bannerMove 1s forwards;
+    animation: bannerMove 1s forwards; /*Sem o forwards o banner some apos aparecer*/
     opacity: 0;
 }
 
@@ -69,14 +69,14 @@ header{
     border: none;
     border-radius: 5px;
     cursor: pointer;  /*Ao passar por cima do item, o mouse mudará de estado*/
-    display: block;
+    display: block; /* Forma utilizada para centralizar o bloco*/
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
     animation: bannerMove 1s forwards;
 }
 
-@keyframes bannerMove{
+@keyframes bannerMove{ /*Comando para que o banner venha de baixo para cima*/
     0%{
         transform: translateY(10rem);
     }
